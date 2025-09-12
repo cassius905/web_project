@@ -1,0 +1,75 @@
+        /* header 전체 스타일 */
+        .headerContainer {
+            display: flex;
+            align-items: center;
+            padding: 10px 40px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 50px
+        }
+
+        /* 로고 (h1) 스타일 */
+        .logo {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        /* 로고 안의 링크(a 태그) 스타일 */
+        .logo a {
+            color: #03c75a;
+            font-family: 'Arial Black', sans-serif;
+            text-decoration: none;
+        }
+
+        /* 우측 사용자 메뉴 컨테이너 */
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: auto;
+        }
+
+        /* 사용자 이름 (span) 스타일 */
+        .user-menu span {
+            font-weight: 500;
+        }
+
+        /* 사용자 메뉴 안의 링크(a)와 버튼(button) 공통 스타일 */
+        .user-menu a,
+        .user-menu button,
+        .top-menu-button {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            font-family: inherit; /* body의 기본 폰트를 따르도록 설정 */
+        }
+
+        /* 링크와 버튼에 마우스를 올렸을 때 스타일 */
+        .user-menu a:hover,
+        .user-menu button:hover,
+        .top-menu-button:hover
+         {
+            background-color: #f4f5f7;
+        }
+
+        .full-user-menu{
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* 상단 메뉴 컨테이너 스타일 */
+        .top-menu-container{
+            margin-left: auto;
+            margin-right: auto;
+        }

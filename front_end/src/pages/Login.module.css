@@ -1,0 +1,91 @@
+/* 전체 로그인 페이지 컨테이너 */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f4f5f7;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+
+/* 로그인 박스 */
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 로고 스타일 */
+.login-logo {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #03c75a; /* 메인 페이지와 동일한 녹색 */
+  margin: 0 0 30px 0;
+}
+
+/* 입력 필드 그룹 */
+.login-form .input-group {
+  margin-bottom: 15px;
+}
+
+.login-form input {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+  transition: border-color 0.2s ease;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #03c75a;
+}
+
+/* 로그인 버튼 */
+.login-button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  background-color: #03c75a;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #02b350;
+}
+
+/* 추가 옵션 링크 (비밀번호 찾기, 회원가입) */
+.login-options {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.login-options a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.login-options a:hover {
+  text-decoration: underline;
+}
+
+.password-text{
+  color: red;
+}

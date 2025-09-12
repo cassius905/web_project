@@ -1,0 +1,88 @@
+        .signup-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f5f7;
+            padding: 20px;
+        }
+        .signup-container {
+            width: 100%;
+            max-width: 420px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #03c75a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        .input-field {
+            width: 100%;
+            height: 48px;
+            padding: 0;
+            padding-left: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #03c75a;
+            box-shadow: 0 0 0 2px rgba(3, 199, 90, 0.2);
+        }
+        .error-message {
+            color: #e53e3e;
+            font-size: 0.875rem;
+            margin-top: 5px;
+        }
+        .success-message {
+            color: #03c75a;
+            font-size: 0.875rem;
+            margin-top: 5px;
+        }
+        .checking-message {
+            color: #777;
+            font-size: 0.875rem;
+            margin-top: 5px;
+        }
+        .signup-btn {
+            width: 100%;
+            height: 50px;
+            border: none;
+            background-color: #03c75a;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin-top: 10px;
+
+        }
+        .signup-btn:hover {
+            background-color: #02b350;
+        }
+        .signup-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }

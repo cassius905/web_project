@@ -1,0 +1,32 @@
+/* 좋아요 버튼 */
+/* .good-button {
+  background: none;
+  border: none;
+}
+.good-button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer; */
+  /* position: relative;
+  padding: 0;
+} */
+
+/* 마우스를 올렸을 때 나타날 새 이모지 (❤️) */
+/* .good-button::before {
+  content: '❤️';
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+} */
+
+/* 버튼에 마우스를 올리면... */
+/* .good-button:hover .emoji {
+  opacity: 0;
+} */
+
+/* .good-button:hover::before {
+  opacity: 1;
+} */

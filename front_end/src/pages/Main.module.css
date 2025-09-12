@@ -1,0 +1,98 @@
+/* 기본 스타일 */
+/* body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f4f5f7;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+} */
+
+/* 전체 컨테이너 */
+.mypage-container {
+  /* 화면 전체 높이를 차지하도록 설정 */
+  min-height: 100vh; 
+  /* flex를 이용해 내부 콘텐츠를 수직/수평 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* 헤더 높이만큼 상단에 패딩을 주어 콘텐츠가 겹치지 않게 함 */
+  padding-top: 60px; /* Header의 높이에 맞게 조절 */
+  box-sizing: border-box;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 550px; /* 검색창 최대 너비 */
+  padding: 20px;
+}
+
+/* 로고 스타일 */
+.logo {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #03c75a; /* Naver 녹색 */
+  margin: 0 0 20px 0;
+  letter-spacing: -1.5px;
+}
+
+/* 검색창 스타일 */
+.search-bar {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #03c75a;
+  border-radius: 25px; /* 둥근 모서리 */
+  overflow: hidden; /* 자식 요소가 모서리를 벗어나지 않도록 */
+  background-color: #fff;
+}
+
+.search-input {
+  flex-grow: 1;
+  border: none;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.search-button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  background-color: #03c75a;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #02b350; /* 마우스를 올렸을 때 약간 더 진한 녹색 */
+}
+
+/* 바로가기 링크 스타일 */
+.shortcut-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.link-item {
+  font-size: 0.95rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.link-item:hover {
+  color: #03c75a; /* 마우스를 올렸을 때 녹색으로 변경 */
+}
+
+a {
+  text-decoration-line : none;
+}

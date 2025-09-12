@@ -1,0 +1,63 @@
+/* 전체 배경 스타일 */
+        .join-complete-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f5f7;
+            padding: 20px;
+            box-sizing: border-box; /* padding이 크기에 영향을 주도록 설정 */
+            text-align: center;
+        }
+
+        /* 가입 완료 박스 컨테이너 */
+        .join-complete-container {
+            width: 100%;
+            max-width: 420px;
+            background-color: white;
+            padding: 50px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 체크 아이콘 스타일 */
+        .check-icon {
+            margin-bottom: 20px;
+        }
+
+        /* '회원가입 완료!' 텍스트 스타일 */
+        .complete-title {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2rem;
+            color: #333;
+            margin-top: 0; /* h1의 기본 마진 제거 */
+            margin-bottom: 15px;
+        }
+
+        /* 환영 메시지 텍스트 스타일 */
+        .complete-message {
+            color: #555;
+            font-size: 1rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        /* '로그인 페이지로 이동' 버튼 스타일 */
+        .login-link-button {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 0;
+            border: none;
+            background-color: #03c75a;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .login-link-button:hover {
+            background-color: #02b350;
+        }
