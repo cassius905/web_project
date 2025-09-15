@@ -19,3 +19,9 @@ CREATE TABLE `user_join_info` (
   `USER_NICK` varchar(45) NOT NULL,
   PRIMARY KEY (`USER_IDX`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+create table USER_COM_GOOD_MAP(
+USER_IDX int,
+COM_IDX int,
+GOOD_YN boolean
+);
