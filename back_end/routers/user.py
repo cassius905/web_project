@@ -3,8 +3,8 @@ from sqlmodel import Session, select
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
 
-from back_end.modules.database import user_join_info, get_session
-from  back_end.models.schemas import LoginRequest, JoinRequest, CheckRequest, CheckRequest2, HeaderData
+from modules.database import user_join_info, get_session
+from  models.schemas import LoginRequest, JoinRequest, CheckRequest, CheckRequest2, HeaderData
 
 # APIRouter 객체 생성
 router = APIRouter()

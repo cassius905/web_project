@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, WebSocket
 from sqlmodel import Session, select
 
-from back_end.modules.database import user_join_info, community_info, get_session
+from modules.database import user_join_info, community_info, get_session
 from models.schemas import CommunityWrite
 
 router = APIRouter()

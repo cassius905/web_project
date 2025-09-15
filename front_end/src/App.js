@@ -23,13 +23,31 @@ function App() {
     const [userNick, setUserNick] = useState('')
     const navigate = useNavigate(); 
 
+     // --- ⬇️ 이 useEffect 부분을 수정합니다 ⬇️ ---
     useEffect(() => {
-        const storedUserIdx = localStorage.getItem('userIdx');
-        if (storedUserIdx) {
-            setIsLoggedIn(true);
-            setUserIdx(storedUserIdx);
-        }
-    }, []);
+        const fetchUserData = async () => {
+            const storedUserIdx = localStorage.getItem('userIdx');
+            if (storedUserIdx) {
+                // 1. 로그인 상태와 userIdx를 먼저 복구합니다.
+                setIsLoggedIn(true);
+                setUserIdx(storedUserIdx);
+
+                // 2. 저장된 userIdx를 사용해 닉네임을 다시 요청합니다.
+                try {
+                    const userData = { useridx: parseInt(storedUserIdx) }; // 서버가 정수를 기대할 수 있으므로 parseInt 사용
+                    const response = await axios.post('http://127.0.0.1:8000/headerData', userData);
+                    setUserNick(response.data.nick);
+                } catch (err) {
+                    console.error("새로고침 시 헤더 데이터 가져오기 오류:", err);
+                    // 혹시 모를 오류 발생 시 로그아웃 처리
+                    handleLogout();
+                }
+            }
+        };
+
+        fetchUserData();
+    }, []); // 이 useEffect는 처음 한 번만 실행됩니다.
+    // --- ⬆️ 여기까지 수정 ⬆️ ---
 
     const handleLogin = async (loggedInUserIdx) => {
         console.log('handleLogin', loggedInUserIdx);

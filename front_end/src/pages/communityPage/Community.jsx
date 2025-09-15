@@ -10,7 +10,7 @@ const Community = () => {
   const [loading, setLoading] = useState(true);
 
   // 1. 최초 게시글 목록을 불러오는 useEffect
-  useEffect(() => {
+  const ComList = () => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get('http://127.0.0.1:8000/community/posts');
@@ -23,7 +23,8 @@ const Community = () => {
       }
     };
     fetchPosts();
-  }, []);
+  };
+  ComList();
 
 
   // // 2. 웹소켓 연결 및 메시지 수신을 위한 useEffect
@@ -53,7 +54,6 @@ const Community = () => {
   //     socket.close();
   //   };
   // }, []); // 이 useEffect도 최초 한 번만 실행합니다.
-
 
   return (
     <div className={styles['community-container']}>
