@@ -10,7 +10,7 @@ const Community = () => {
   const [loading, setLoading] = useState(true);
 
   // 1. 최초 게시글 목록을 불러오는 useEffect
-  const ComList = () => {
+  useEffect(() => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get('http://127.0.0.1:8000/community/posts');
@@ -23,37 +23,7 @@ const Community = () => {
       }
     };
     fetchPosts();
-  };
-  ComList();
-
-
-  // // 2. 웹소켓 연결 및 메시지 수신을 위한 useEffect
-  // useEffect(() => {
-  //   // 백엔드의 웹소켓 주소와 연결합니다.
-  //   const socket = new WebSocket('ws://127.0.0.1:8000/ws/community');
-
-  //   // 연결이 성공했을 때
-  //   socket.onopen = () => {
-  //     console.log("WebSocket 연결 성공");
-  //   };
-
-  //   // 서버로부터 메시지(새 글 정보)를 받았을 때
-  //   socket.onmessage = (event) => {
-  //     const newPost = JSON.parse(event.data);
-  //     // 기존 게시글 목록의 맨 앞에 새 글을 추가하여 상태를 업데이트합니다.
-  //     setPosts(prevPosts => [newPost, ...prevPosts]);
-  //   };
-
-  //   // 연결이 닫혔을 때
-  //   socket.onclose = () => {
-  //     console.log("WebSocket 연결 종료");
-  //   };
-
-  //   // 컴포넌트가 언마운트될 때(페이지를 벗어날 때) 소켓 연결을 정리합니다.
-  //   return () => {
-  //     socket.close();
-  //   };
-  // }, []); // 이 useEffect도 최초 한 번만 실행합니다.
+  }, []);
 
   return (
     <div className={styles['community-container']}>

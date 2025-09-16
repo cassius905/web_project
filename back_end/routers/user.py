@@ -48,8 +48,15 @@ def check_nick(requestdata : CheckRequest2, db: Session = Depends(get_session)):
     return {"isDuplicate": bool(nick_from_db)}
 
 @router.post('/headerData')
-def header_data(request_data : HeaderData, db : Session = Depends(get_session)):
-    # ... (기존 /headerData 함수의 모든 코드) ...
+def header_data(request_data: HeaderData, db: Session = Depends(get_session)):
     query = select(user_join_info).where(user_join_info.USER_IDX == request_data.useridx)
     user_from_db = db.exec(query).first()
-    return {'nick' : user_from_db.USER_NICK}
+
+    # ⬇️ 이 부분을 추가합니다 ⬇️
+    # 사용자를 찾았는지 먼저 확인합니다.
+    if not user_from_db:
+        # 사용자가 없으면 404 에러를 보내 프론트엔드에 알려줍니다.
+        raise HTTPException(status_code=404, detail="User not found")
+
+    # 사용자를 찾았을 때만 닉네임을 반환합니다.
+    return {'nick': user_from_db.USER_NICK}
