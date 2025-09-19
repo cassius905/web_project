@@ -49,7 +49,7 @@ const Community = () => {
           <div className={styles['post-item']} key={post.COM_IDX} >
             
             <h3>{post.TITLE}</h3>
-            <p>{post.USER_NICK} · 10분 전 | <span className={styles['emoji']}>❤️ {post.GOOD_COUNT}</span></p>
+            <p>{post.USER_NICK} · {post.UPDATE_AT} | <span className={styles['emoji']}>❤️ {post.GOOD_COUNT}</span></p>
             
           </div>
           ))}
